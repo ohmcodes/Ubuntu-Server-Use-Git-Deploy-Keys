@@ -40,12 +40,12 @@ The key's randomart image is:
 
 ```
 
-## Opening Pub file to copy & paste it to Deploy Keys
+## Opening Pub file and Copy/Paste for Deploy Keys
 ```
 type in:
 cat ~/.ssh/id_rsa.pub
 ```
-#### then copy go to your repo (note: not in your account settings) and navigate to settings find Deploy Keys tab
+#### then copy the keygen and go to your repo (note: not in your account settings) and navigate to settings find Deploy Keys tab
 then create new Deploy keys name a title and paste the keygen 
 
 
