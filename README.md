@@ -4,7 +4,7 @@ This guide will teach you how to use Github Deploy keys in your Hosting server h
 
 ## Creating Keygen
 ```
-ssh-keygen (enter)
+ssh-keygen -t rsa -b 4096 -C "your-email@email.com"
 
 this will appear
 
