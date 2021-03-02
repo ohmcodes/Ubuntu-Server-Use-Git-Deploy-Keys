@@ -40,6 +40,28 @@ The key's randomart image is:
 
 ```
 
+## Create config file
+```
+sudo nano ~/.ssh/config
+
+Host gitreponame
+Hostname github.com
+IdentityFile "~/.ssh/id_rsa"
+
+Note: 
+"Host" will be your <change_this_with_your_host_in_config_file> later on
+"IdentityFile" will be your id_rsa (default) if you change it and changed its location you must indicate here
+
+Note: to be sure change the file permission of id_rsa to 400
+
+sudo chmod 400 ~/.ssh/id_rsa
+
+Change the config file to 644
+
+sudo chmod 644 ~/.ssh/config
+
+```
+
 ## Opening Pub file and Copy/Paste for Deploy Keys
 ```
 type in:
@@ -63,5 +85,21 @@ ssh-add
 Enter passphrase (empty for no passphrase):
 ```
 #### this will save your ssh passphrase so whenever you run git pull it will not ask for passphrase
+
+
+#### Navigate to your repo and check the remote URL
+```
+git remote -v
+
+if its...
+origin https://github.com/USERNAME/REPOSITORY.git
+
+if its under your account
+git remote set-url origin git@<change_this_with_your_host_in_config_file>:USERNAME/REPOSITORY.git
+
+if its under an organization
+git remote set-url origin git@<change_this_with_your_host_in_config_file>:ORGANIZATION/REPOSITORY.git
+
+```
 
 ### Enjoy! :)
