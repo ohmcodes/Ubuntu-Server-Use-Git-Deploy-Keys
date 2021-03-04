@@ -1,4 +1,4 @@
-# Ubuntu-Server-Use-Git-Deploy-Keys
+# Ubuntu-Server-Use-Git-Deploy-SSH-Keys
 
 This guide will teach you how to use Github Deploy keys in your Hosting server here Im gonna use AWS lightsail Ubuntu 20
 
@@ -13,7 +13,7 @@ Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
 
 just press ENTER or for advance user you can put a name on it and it will save to current directory you are on.
 
-Enter passphrase (empty for no passphrase):
+Enter passphrase (empty for no passphrase): (leave it blank if you dont want to input it everytime you do push/pull)
 
 Enter (bypass) or put passphrase for more security
 
@@ -68,14 +68,14 @@ type in:
 cat ~/.ssh/id_rsa.pub
 ```
 #### then copy the keygen and go to your repo (note: not in your account settings) and navigate to settings find Deploy Keys tab
-then create new Deploy keys name a title and paste the keygen 
-
+#### then create new Deploy keys name a title and paste the keygen 
+#### if you intent to do this in your personal account look for Settings > SSH and GPG keys
 
 #### Go back to your console and type in:
 ```
 eval `ssh-agent`
 ```
-
+#### this only works if you work long in your project and if you put passphrase
 #### Make sure you use the backquote (`), located under the tilde (~), rather than the single quote (').
 
 ```
